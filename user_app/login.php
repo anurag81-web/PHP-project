@@ -15,13 +15,13 @@ if(isset($_POST['login'])) {
         if(password_verify($password, $row['password'])){
             $_SESSION['user_id'] = $row['id'];
             $_SESSION['username'] = $row['username'];
-            header("Location: profile.php");
+            header("Location: index.php");
             exit();
         } else {
-            $error = "Wrong Password, Try Again!";
+            $error = "Wrong password";
         }
     } else {
-        $error = "Username not found!";
+        $error = "Username not found";
     }
 }
 ?>
@@ -49,7 +49,7 @@ if(isset($_POST['login'])) {
         <button type="submit" name="login">Login</button>
     </form>
 
-    <p>Don't have an account? <a href="register.php">Register</a></p>
+    <p><a href="register.php">New account</a></p>
 </div>
 
 </body>

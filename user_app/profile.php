@@ -22,7 +22,7 @@ $user = mysqli_fetch_assoc($result);
 <body>
 
 <div class="container">
-    <h2>Welcome, <?php echo $user['fname']; ?>!</h2>
+    <h2>Your Details<?php ?></h2>
 
     <p><b>First Name:</b> <?php echo $user['fname']; ?></p>
     <p><b>Last Name:</b> <?php echo $user['lname']; ?></p>

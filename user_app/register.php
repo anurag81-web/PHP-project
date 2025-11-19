@@ -12,15 +12,15 @@ if(isset($_POST['register'])) {
     $check = mysqli_query($conn, "SELECT * FROM users WHERE email='$email' OR username='$username'");
 
     if(mysqli_num_rows($check) > 0){
-        echo "<script>alert('Email or Username already exists!');</script>";
+        echo "<script>alert('Email or username already exist');</script>";
     } else {
         $sql = "INSERT INTO users (fname, lname, email, username, password)
                 VALUES ('$fname', '$lname', '$email', '$username', '$password')";
 
         if (mysqli_query($conn, $sql)) {
-            echo "<script>alert('Registration Successful!'); window.location='login.php';</script>";
+            echo "<script>alert('Registered successfully'); window.location='login.php';</script>";
         } else {
-            echo "<script>alert('Error: Could not register user.');</script>";
+            echo "<script>alert('Cannot register the user.');</script>";
         }
     }
 }
@@ -35,29 +35,29 @@ if(isset($_POST['register'])) {
 <body>
 
 <div class="container">
-    <h2>Create an Account</h2>
+    <h2>Create new account</h2>
 
     <form action="register.php" method="POST">
 
-        <label>First Name:</label>
+        <label>First Name</label>
         <input type="text" name="fname" required>
 
-        <label>Last Name:</label>
+        <label>Last Name</label>
         <input type="text" name="lname" required>
 
-        <label>Email:</label>
+        <label>Email</label>
         <input type="email" name="email" required>
 
-        <label>Username:</label>
+        <label>Username</label>
         <input type="text" name="username" required>
 
-        <label>Password:</label>
+        <label>Password</label>
         <input type="password" name="password" required>
 
         <button type="submit" name="register">Register</button>
     </form>
 
-    <p>Already have an account? <a href="login.php">Login</a></p>
+    <p><a href="login.php">Login</a></p>
 </div>
 
 </body>

@@ -27,9 +27,9 @@ if(isset($_POST['update'])) {
     }
 
     if(mysqli_query($conn, $sql_update)){
-        echo "<script>alert('Profile updated successfully!'); window.location='profile.php';</script>";
+        echo "<script>alert('Profile updated successfully'); window.location='profile.php';</script>";
     } else {
-        echo "<script>alert('Error: Could not update profile.');</script>";
+        echo "<script>alert('Can't update profile.');</script>";
     }
 }
 ?>
@@ -37,13 +37,13 @@ if(isset($_POST['update'])) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Update Profile</title>
+    <title>Update Your Profile</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
-    <h2>Update Profile</h2>
+    <h2>Update Your Profile</h2>
 
     <form action="" method="POST">
         <label>First Name:</label>
