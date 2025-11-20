@@ -11,7 +11,6 @@ $username = $isLoggedIn && isset($_SESSION['username']) ? $_SESSION['username'] 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Home Page</title>
     <link rel="stylesheet" href="style.css">
 </head>
 

@@ -64,7 +64,7 @@ if(isset($_POST['update'])) {
         <button type="submit" name="update">Save Changes</button>
     </form>
 
-    <a href="profile.php" class="button-link">Back to Profile</a>
+    <a href="profile.php" class="button-link">Profile</a>
 </div>
 
 </body>

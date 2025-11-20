@@ -8,7 +8,7 @@ body {
 }
 
 .container {
-    background: white;
+    background: rgb(248, 244, 244);
     padding: 25px;
     width: 300px;
     border-radius: 10px;
@@ -28,7 +28,7 @@ input {
     width: 100%;
     padding: 8px;
     margin: 8px 0 15px 0;
-    border: 1px solid #aaa;
+    border: 1px solid #f5f1f1;
     border-radius: 5px;
 }
 
